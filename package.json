@@ -38,6 +38,8 @@
     "eslint-plugin-prettier": "^3.1.4",
     "form-data": "^3.0.0",
     "fs-extra": "^9.0.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
     "nodemon": "^2.0.6",
     "np": "^7.0.0",
     "npm-run-all": "^4.1.5",
@@ -54,5 +56,15 @@
     "ignore": [
       "build/info.json"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -c .commitlintrc.json -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.ts": "eslint --ext .ts"
   }
 }
