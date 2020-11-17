@@ -16,7 +16,7 @@
     "type-check": "tsc --noEmit",
     "update-appcast": "node scripts/update-appcast.js",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "pub": "np --no-publish",
+    "pub": "np --no-publish --no-release-draft",
     "version": "npm run changelog && git add ."
   },
   "dependencies": {
