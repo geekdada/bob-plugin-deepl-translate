@@ -11,7 +11,9 @@ function generateInfo() {
     summary: '',
     icon: '115',
     author: 'Roy Li',
-    homepage: 'https://royli.dev',
+    homepage: 'https://github.com/geekdada/bob-plugin-deepl-translate.git',
+    appcast:
+      'https://github.com/geekdada/bob-plugin-deepl-translate/raw/master/appcast.json',
     minBobVersion: '0.5.0',
     options: [
       {
@@ -68,7 +70,6 @@ async function main() {
   const info = {
     ...generateInfo(),
     version,
-    appcast: '',
   }
 
   await fs.writeJson(join(buildDir, 'info.json'), info)

@@ -2,15 +2,19 @@
   "name": "bob-plugin-deepl-translate",
   "version": "0.1.0",
   "author": "Roy Li <me@dada.li>",
+  "homepage": "https://github.com/geekdada/bob-plugin-deepl-translate",
+  "repository": "https://github.com/geekdada/bob-plugin-deepl-translate.git",
   "license": "MIT",
   "private": true,
   "scripts": {
     "clean": "rimraf build && rimraf release",
     "build": "run-s clean && cross-env NODE_ENV=production rollup -c rollup.config.js",
+    "bundle": "node scripts/bundle.js",
+    "bundle:watch": "nodemon --watch build scripts/bundle.js",
+    "make-release": "run-s build bundle update-appcast",
     "dev": "run-s clean && cross-env NODE_ENV=development rollup -c rollup.config.js --watch",
     "type-check": "tsc --noEmit",
-    "bundle": "node scripts/bundle.js",
-    "bundle:watch": "nodemon --watch build scripts/bundle.js"
+    "update-appcast": "node scripts/update-appcast.js"
   },
   "dependencies": {
     "@rollup/plugin-commonjs": "^16.0.0",
