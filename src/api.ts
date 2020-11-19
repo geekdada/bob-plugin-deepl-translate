@@ -11,7 +11,7 @@ export class Api {
       case 'deepl':
         return 'https://api.deepl.com'
       case 'sub-deepl':
-        return 'https://sub-deepl-api.nerdynerd.org'
+        return 'https://sub-deepl.nerdynerd.org'
       case 'local':
         return 'http://localhost:1337'
     }
