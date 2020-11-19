@@ -12,8 +12,8 @@ interface $info {
 }
 
 interface $log {
-  info(obj: string | Record<string, unknown>): void
-  error(obj: string | Record<string, unknown>): void
+  info(obj?: string | Record<string, unknown>): void
+  error(obj?: string | Record<string, unknown>): void
 }
 
 interface $http {
@@ -21,7 +21,7 @@ interface $http {
 }
 
 export interface RequestObject {
-  method: 'GET' | 'POST' | 'DELETE'
+  method: 'GET' | 'POST' | 'DELETE' | 'HEAD'
   url: string
   header?: Record<string, string>
   body?: Record<string, unknown>
@@ -51,7 +51,7 @@ export interface RequestCallbackResponse<T = Record<string, unknown>> {
 
 interface $option {
   token: string
-  provider: 'deepl' | 'sub-deepl'
+  provider: 'deepl' | 'sub-deepl' | 'local'
   formality: 'default' | 'more' | 'less'
 }
 

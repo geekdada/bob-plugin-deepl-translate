@@ -5,6 +5,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
 import nodePolyfills from 'rollup-plugin-node-polyfills'
 import typescript from '@rollup/plugin-typescript'
+import replace from '@rollup/plugin-replace'
 
 export default {
   input: join(__dirname, './src/main.ts'),
@@ -27,6 +28,11 @@ export default {
     }),
     commonjs({
       include: ['node_modules/**'],
+    }),
+    replace({
+      'process.env.NODE_ENV': JSON.stringify(
+        process.env.NODE_ENV || 'development',
+      ),
     }),
     nodePolyfills(),
     typescript({}),

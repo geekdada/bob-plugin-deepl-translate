@@ -35,6 +35,14 @@ function generateInfo() {
             title: 'Sub DeepL',
             value: 'sub-deepl',
           },
+          ...(process.env.NODE_ENV === 'development'
+            ? [
+                {
+                  title: 'Local',
+                  value: 'local',
+                },
+              ]
+            : null),
         ],
       },
       {

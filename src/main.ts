@@ -35,7 +35,7 @@ export function translate(
         text: string
       }>
     }>({
-      method: 'GET',
+      method: 'POST',
       url: '/v2/translate',
       body: {
         text: query.text,
@@ -47,36 +47,24 @@ export function translate(
     })
 
     if (response.error) {
-      $log.error(response.error)
+      const { statusCode } = response.response
+
+      let reason: ErrorType
+
+      if (statusCode >= 400 && statusCode < 500) {
+        reason = 'param'
+      } else {
+        reason = 'api'
+      }
+
       completion({
         error: {
-          type: 'api',
-          message: '接口请求错误',
+          type: reason,
+          message: `接口响应错误 ${translateStatusCode(statusCode)}`,
+          addtion: JSON.stringify(response),
         },
       })
     } else {
-      const { statusCode } = response.response
-
-      if (statusCode > 299) {
-        let reason: ErrorType
-
-        if (statusCode >= 400 && statusCode < 500) {
-          reason = 'param'
-        } else {
-          reason = 'api'
-        }
-
-        completion({
-          error: {
-            type: reason,
-            message: translateStatusCode(statusCode),
-            addtion: response.data,
-          },
-        })
-
-        return
-      }
-
       const translations = response.data?.translations
 
       if (!translations || !translations.length) {
@@ -98,11 +86,11 @@ export function translate(
       })
     }
   })().catch((err) => {
-    $log.error(err)
     completion({
       error: {
         type: err._type || 'unknown',
         message: err._message || '未知错误',
+        addtion: err._addtion,
       },
     })
   })

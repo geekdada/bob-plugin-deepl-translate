@@ -22,7 +22,7 @@ export const translateStatusCode = (code: number): string => {
     case 400:
       return 'Bad request. Please check error message and your parameters.'
     case 403:
-      return 'Authorization failed. Please supply a valid auth_key parameter.'
+      return 'Authorization failed. Please supply a valid token.'
     case 404:
       return 'The requested resource could not be found.'
     case 413:
