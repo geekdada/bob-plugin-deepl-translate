@@ -42,7 +42,7 @@ function generateInfo() {
                   value: 'local',
                 },
               ]
-            : null),
+            : []),
         ],
       },
       {
