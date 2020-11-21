@@ -1,6 +1,6 @@
 {
   "name": "bob-plugin-deepl-translate",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "author": "Roy Li <me@dada.li>",
   "homepage": "https://github.com/geekdada/bob-plugin-deepl-translate",
   "repository": "https://github.com/geekdada/bob-plugin-deepl-translate.git",
