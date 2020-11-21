@@ -2,6 +2,13 @@
   "identifier": "dev.royli.bob-plugin-deepl-translate",
   "versions": [
     {
+      "version": "0.4.0",
+      "desc": "https://github.com/geekdada/bob-plugin-deepl-translate/blob/master/CHANGELOG.md",
+      "sha256": "002c725f0541fae988ad52767480ec37aae8a27db2428d1bd1f2f0b060bf5c41",
+      "url": "https://github.com/geekdada/bob-plugin-deepl-translate/releases/download/v0.4.0/bob-plugin-deepl-translate-v0.4.0.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
       "version": "0.3.2",
       "desc": "https://github.com/geekdada/bob-plugin-deepl-translate/blob/master/CHANGELOG.md",
       "sha256": "02d4477f88055426d43b7078ed6519ebc4bad56f28e55fc45956dd6c36890f03",
