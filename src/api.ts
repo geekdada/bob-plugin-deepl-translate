@@ -11,7 +11,7 @@ export class Api {
       case 'deepl':
         return 'https://api.deepl.com'
       case 'sub-deepl':
-        return 'https://sub-deepl.nerdynerd.org'
+        return 'https://sub-deepl-api.nerdynerd.org'
       case 'local':
         return 'http://localhost:1337'
     }
@@ -40,6 +40,7 @@ export class Api {
         url,
         header: {
           'Content-Type': 'application/x-www-form-urlencoded',
+          'User-Agent': 'sub-deepl-bob/' + process.env.__VERSION__,
         },
         body,
       })
