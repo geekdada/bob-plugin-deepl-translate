@@ -12,6 +12,10 @@
 2. 下载插件 [releases](https://github.com/geekdada/bob-plugin-deepl-translate/releases)
 3. [安装插件](https://ripperhe.gitee.io/bob/#/general/quickstart/plugin?id=%e5%ae%89%e8%a3%85%e6%8f%92%e4%bb%b6)
 
+## Sub DeepL
+
+每个月最少 2.5 美元即可使用 DeepL API，详情请见 [sub-deepl.royli.dev](https://sub-deepl.royli.dev?utm_source=github&utm_medium=readme)。
+
 ## 注意
 
 ### 字符是如何计费的？
