@@ -25,15 +25,7 @@ export class Api {
         ...requestObject.body,
         auth_key: this.token,
       }
-      let url = `${this.baseUrl}${requestObject.url}`
-
-      if (this.provider !== 'deepl') {
-        if (['GET', 'HEAD', 'DELETE'].includes(requestObject.method)) {
-          body.token = body.auth_key
-        } else {
-          url = `${url}?token=${this.token}`
-        }
-      }
+      const url = `${this.baseUrl}${requestObject.url}`
 
       return await $http.request({
         ...requestObject,
