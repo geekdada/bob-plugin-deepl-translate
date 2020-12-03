@@ -74,7 +74,7 @@ async function main() {
   const version = require('../package.json').version
   const buildDir = join(__dirname, '../build')
   const releaseDir = join(__dirname, '../release')
-  const pkg = join(releaseDir, `${pkgName}-v${version}.bobplugin`)
+  const pkg = join(releaseDir, `${pkgName}.bobplugin`)
   const info = {
     ...generateInfo(),
     version,

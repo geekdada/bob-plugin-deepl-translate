@@ -8,10 +8,7 @@ const githubRelease = `https://github.com/geekdada/bob-plugin-deepl-translate/re
 
 function main() {
   const pkgName = 'bob-plugin-deepl-translate'
-  const pkgPath = path.join(
-    __dirname,
-    `../release/${pkgName}-v${pkg.version}.bobplugin`,
-  )
+  const pkgPath = path.join(__dirname, `../release/${pkgName}.bobplugin`)
   const appcastPath = path.join(__dirname, '../appcast.json')
 
   const fileBuffer = fs.readFileSync(pkgPath)
@@ -24,7 +21,7 @@ function main() {
     desc:
       'https://github.com/geekdada/bob-plugin-deepl-translate/blob/master/CHANGELOG.md',
     sha256: hex,
-    url: `${githubRelease}/v${pkg.version}/${pkgName}-v${pkg.version}.bobplugin`,
+    url: `${githubRelease}/v${pkg.version}/${pkgName}.bobplugin`,
     minBobVersion: '0.5.0',
   }
 
