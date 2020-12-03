@@ -29,6 +29,9 @@ export function translate(
       throw err
     }
 
+    const formality = isFormalitySupported(targetLanguage)
+      ? $option.formality
+      : 'default'
     const response = await api.request<{
       translations: ReadonlyArray<{
         detected_source_language: string
@@ -42,7 +45,7 @@ export function translate(
         target_lang: targetLanguage,
         split_sentences: '1',
         preserve_formatting: '0',
-        formality: $option.formality,
+        formality,
       },
     })
 
@@ -94,4 +97,10 @@ export function translate(
       },
     })
   })
+}
+
+function isFormalitySupported(lang: string): boolean {
+  const unsupported = ['EN', 'EN-GB', 'EN-US', 'ES', 'JA', 'ZH']
+
+  return !unsupported.includes(lang.toUpperCase())
 }
