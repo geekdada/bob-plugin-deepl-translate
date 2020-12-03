@@ -1,3 +1,12 @@
+## [0.4.2](https://github.com/geekdada/bob-plugin-deepl-translate/compare/v0.4.1...v0.4.2) (2020-12-03)
+
+
+### Bug Fixes
+
+* no formality for certain languages ([fde6417](https://github.com/geekdada/bob-plugin-deepl-translate/commit/fde6417c38424d8b55adae2be01187db78829095))
+
+
+
 ## [0.4.1](https://github.com/geekdada/bob-plugin-deepl-translate/compare/v0.4.0...v0.4.1) (2020-11-26)
 
 
