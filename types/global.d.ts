@@ -51,7 +51,7 @@ export interface RequestCallbackResponse<T = Record<string, unknown>> {
 
 interface $option {
   token: string
-  provider: 'deepl' | 'sub-deepl' | 'local'
+  provider: 'deepl' | 'a-translator' | 'local'
   formality: 'default' | 'more' | 'less'
 }
 

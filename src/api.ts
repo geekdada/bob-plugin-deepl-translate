@@ -2,7 +2,7 @@ import { RequestCallbackResponse, RequestObject } from '../types/global'
 
 export class Api {
   constructor(
-    private provider: 'deepl' | 'sub-deepl' | 'local',
+    private provider: 'deepl' | 'a-translator' | 'local',
     private token: string,
   ) {}
 
@@ -10,8 +10,8 @@ export class Api {
     switch (this.provider) {
       case 'deepl':
         return 'https://api.deepl.com'
-      case 'sub-deepl':
-        return 'https://sub-deepl-api.nerdynerd.org'
+      case 'a-translator':
+        return 'https://a-translator-api.nerdynerd.org'
       case 'local':
         return 'http://localhost:1337'
     }

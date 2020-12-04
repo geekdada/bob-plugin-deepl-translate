@@ -32,8 +32,8 @@ function generateInfo() {
             value: 'deepl',
           },
           {
-            title: 'Sub DeepL',
-            value: 'sub-deepl',
+            title: 'A Translator',
+            value: 'a-translator',
           },
           ...(process.env.NODE_ENV === 'development'
             ? [
