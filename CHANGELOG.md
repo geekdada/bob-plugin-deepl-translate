@@ -1,3 +1,12 @@
+# [0.5.0](https://github.com/geekdada/bob-plugin-deepl-translate/compare/v0.4.2...v0.5.0) (2020-12-04)
+
+
+### Features
+
+* rename api ([655526b](https://github.com/geekdada/bob-plugin-deepl-translate/commit/655526b410e6c3690b595633a868d149776cfc26))
+
+
+
 ## [0.4.2](https://github.com/geekdada/bob-plugin-deepl-translate/compare/v0.4.1...v0.4.2) (2020-12-03)
 
 
