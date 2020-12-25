@@ -19,7 +19,8 @@ function main() {
   const version = {
     version: pkg.version,
     desc:
-      'https://github.com/geekdada/bob-plugin-deepl-translate/blob/master/CHANGELOG.md',
+      'https://github.com/geekdada/bob-plugin-deepl-translate/releases/tag/v' +
+      pkg.version,
     sha256: hex,
     url: `${githubRelease}/v${pkg.version}/${pkgName}.bobplugin`,
     minBobVersion: '0.5.0',
