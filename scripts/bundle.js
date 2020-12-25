@@ -35,6 +35,10 @@ function generateInfo() {
             title: 'A Translator',
             value: 'a-translator',
           },
+          {
+            title: 'A Translator (Global)',
+            value: 'a-translator-cf',
+          },
           ...(process.env.NODE_ENV === 'development'
             ? [
                 {

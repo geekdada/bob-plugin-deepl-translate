@@ -1,10 +1,11 @@
-import { RequestCallbackResponse, RequestObject } from '../types/global'
+import {
+  RequestCallbackResponse,
+  RequestObject,
+  validProvider,
+} from '../types/global'
 
 export class Api {
-  constructor(
-    private provider: 'deepl' | 'a-translator' | 'local',
-    private token: string,
-  ) {}
+  constructor(private provider: validProvider | null, private token: string) {}
 
   private get baseUrl(): string {
     switch (this.provider) {
@@ -12,8 +13,12 @@ export class Api {
         return 'https://api.deepl.com'
       case 'a-translator':
         return 'https://a-translator-api.nerdynerd.org'
+      case 'a-translator-cf':
+        return 'https://a-translator-api-cf.nerdynerd.org'
       case 'local':
         return 'http://localhost:1337'
+      default:
+        return 'https://a-translator-api.nerdynerd.org'
     }
   }
 
@@ -32,7 +37,7 @@ export class Api {
         url,
         header: {
           'Content-Type': 'application/x-www-form-urlencoded',
-          'User-Agent': 'sub-deepl-bob/' + process.env.__VERSION__,
+          'User-Agent': 'a-translator-bob/' + process.env.__VERSION__,
         },
         body,
       })

@@ -51,7 +51,7 @@ export interface RequestCallbackResponse<T = Record<string, unknown>> {
 
 interface $option {
   token: string
-  provider: 'deepl' | 'a-translator' | 'local'
+  provider: validProvider | null
   formality: 'default' | 'more' | 'less'
 }
 
@@ -61,3 +61,5 @@ declare global {
   const $http: $http
   const $option: $option
 }
+
+type validProvider = 'deepl' | 'a-translator' | 'a-translator-cf' | 'local'
