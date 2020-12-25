@@ -1,3 +1,12 @@
+# [0.6.0](https://github.com/geekdada/bob-plugin-deepl-translate/compare/v0.5.0...v0.6.0) (2020-12-25)
+
+
+### Features
+
+* support new api endpoint ([f1b363a](https://github.com/geekdada/bob-plugin-deepl-translate/commit/f1b363a1207aacaf0e9642ecc6ba0b9577f4a4c0))
+
+
+
 # [0.5.0](https://github.com/geekdada/bob-plugin-deepl-translate/compare/v0.4.2...v0.5.0) (2020-12-04)
 
 
