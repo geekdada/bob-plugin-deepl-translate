@@ -51,3 +51,4 @@ jobs:
         with:
           artifacts: 'release/*.bobplugin'
           token: ${{ secrets.GITHUB_TOKEN }}
+          draft: true
