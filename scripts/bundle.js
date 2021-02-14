@@ -22,34 +22,6 @@ function generateInfo() {
         title: 'Token',
       },
       {
-        identifier: 'provider',
-        type: 'menu',
-        title: 'API',
-        defaultValue: 'deepl',
-        menuValues: [
-          {
-            title: 'DeepL',
-            value: 'deepl',
-          },
-          {
-            title: 'A Translator',
-            value: 'a-translator',
-          },
-          {
-            title: 'A Translator (Global)',
-            value: 'a-translator-cf',
-          },
-          ...(process.env.NODE_ENV === 'development'
-            ? [
-                {
-                  title: 'Local',
-                  value: 'local',
-                },
-              ]
-            : []),
-        ],
-      },
-      {
         identifier: 'formality',
         type: 'menu',
         title: 'Formality',

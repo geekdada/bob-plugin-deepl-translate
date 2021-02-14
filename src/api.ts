@@ -8,18 +8,7 @@ export class Api {
   constructor(private provider: validProvider | null, private token: string) {}
 
   private get baseUrl(): string {
-    switch (this.provider) {
-      case 'deepl':
-        return 'https://api.deepl.com'
-      case 'a-translator':
-        return 'https://a-translator-api.nerdynerd.org'
-      case 'a-translator-cf':
-        return 'https://a-translator-api-cf.nerdynerd.org'
-      case 'local':
-        return 'http://localhost:1337'
-      default:
-        return 'https://a-translator-api.nerdynerd.org'
-    }
+    return 'https://api.deepl.com'
   }
 
   async request<T = Record<string, unknown>>(

@@ -14,11 +14,8 @@
 
 ## 配置
 
+- `token`：DeepL API Token（需自己购买）。
 - `formality` 正式程度： 设置翻译后的文本是倾向于正式语言还是非正式语言。此功能目前适用于所有目标语言，除了英语、英式英语、美式英语、西班牙语、汉语和日语。
-
-## A Translator
-
-每个月最少 20 港币即可使用 DeepL 翻译服务，详情请见 [a-translator.royli.dev](https://a-translator.royli.dev?utm_source=github&utm_medium=readme)。
 
 ## 注意
 
