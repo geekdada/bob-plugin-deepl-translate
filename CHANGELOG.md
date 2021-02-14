@@ -1,3 +1,12 @@
+# [0.7.0](https://github.com/geekdada/bob-plugin-deepl-translate/compare/v0.6.0...v0.7.0) (2021-02-14)
+
+
+### Features
+
+* remove support for a translator ([08eaca1](https://github.com/geekdada/bob-plugin-deepl-translate/commit/08eaca1c2a6152a4e321e859b05c36d16e2f9211))
+
+
+
 # [0.6.0](https://github.com/geekdada/bob-plugin-deepl-translate/compare/v0.5.0...v0.6.0) (2020-12-25)
 
 
