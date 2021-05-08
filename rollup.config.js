@@ -30,12 +30,15 @@ export default {
       include: ['node_modules/**'],
     }),
     replace({
-      'process.env.NODE_ENV': JSON.stringify(
-        process.env.NODE_ENV || 'development',
-      ),
-      'process.env.__VERSION__': JSON.stringify(
-        require('./package.json').version,
-      ),
+      values: {
+        'process.env.NODE_ENV': JSON.stringify(
+          process.env.NODE_ENV || 'development',
+        ),
+        'process.env.__VERSION__': JSON.stringify(
+          require('./package.json').version,
+        ),
+      },
+      preventAssignment: true,
     }),
     nodePolyfills(),
     typescript({}),
