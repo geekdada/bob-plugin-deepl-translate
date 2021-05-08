@@ -1,3 +1,12 @@
+# [0.8.0](https://github.com/geekdada/bob-plugin-deepl-translate/compare/v0.7.0...v0.8.0) (2021-05-08)
+
+
+### Features
+
+* add support for deepl free api token ([b1b65d5](https://github.com/geekdada/bob-plugin-deepl-translate/commit/b1b65d58eb7ef7e853abc79aa6a4982d0bb07663))
+
+
+
 # [0.7.0](https://github.com/geekdada/bob-plugin-deepl-translate/compare/v0.6.0...v0.7.0) (2021-02-14)
 
 

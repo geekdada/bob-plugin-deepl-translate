@@ -1,6 +1,6 @@
 {
   "name": "bob-plugin-deepl-translate",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "author": "Roy Li <me@dada.li>",
   "homepage": "https://github.com/geekdada/bob-plugin-deepl-translate",
   "repository": "https://github.com/geekdada/bob-plugin-deepl-translate.git",
@@ -33,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^4.8.0",
     "@typescript-eslint/parser": "^4.8.0",
     "adm-zip": "^0.4.16",
+    "conventional-changelog-cli": "^2.1.1",
     "cross-env": "^7.0.2",
     "esbuild": "^0.7.22",
     "eslint": "^7.13.0",
