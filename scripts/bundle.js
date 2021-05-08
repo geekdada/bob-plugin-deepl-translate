@@ -22,6 +22,22 @@ function generateInfo() {
         title: 'Token',
       },
       {
+        identifier: 'api',
+        type: 'menu',
+        title: 'API',
+        defaultValue: 'deepl-pro',
+        menuValues: [
+          {
+            title: 'Pro',
+            value: 'deepl-pro',
+          },
+          {
+            title: 'Free',
+            value: 'deepl-free',
+          },
+        ],
+      },
+      {
         identifier: 'formality',
         type: 'menu',
         title: 'Formality',

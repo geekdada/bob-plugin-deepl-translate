@@ -13,9 +13,9 @@ export function translate(
   query: TranslateQuery,
   completion: (data: TranslateCompletion) => void,
 ): void {
-  const api = new Api('deepl', $option.token)
+  const api = new Api($option.api, $option.token);
 
-  ;(async () => {
+  ; (async () => {
     const targetLanguage = langMap.get(query.detectTo)
 
     $log.info(`translate to ${targetLanguage}`)

@@ -5,10 +5,16 @@ import {
 } from '../types/global'
 
 export class Api {
-  constructor(private provider: validProvider | null, private token: string) {}
+  constructor(private provider: validProvider | null, private token: string) { }
 
   private get baseUrl(): string {
-    return 'https://api.deepl.com'
+    switch (this.provider) {
+      case 'deepl-pro':
+        return 'https://api.deepl.com'
+
+      default:
+        return 'https://api-free.deepl.com'
+    }
   }
 
   async request<T = Record<string, unknown>>(
