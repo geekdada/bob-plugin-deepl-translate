@@ -1,3 +1,12 @@
+## [0.8.1](https://github.com/geekdada/bob-plugin-deepl-translate/compare/v0.8.0...v0.8.1) (2023-02-25)
+
+
+### Bug Fixes
+
+* DeepL API authorization ([711851e](https://github.com/geekdada/bob-plugin-deepl-translate/commit/711851efb41d1c4e24c9b43f2a137919b0f3e368))
+
+
+
 # [0.8.0](https://github.com/geekdada/bob-plugin-deepl-translate/compare/v0.7.0...v0.8.0) (2021-05-08)
 
 
