@@ -5,7 +5,7 @@ import {
 } from '../types/global'
 
 export class Api {
-  constructor(private provider: validProvider | null, private token: string) { }
+  constructor(private provider: validProvider | null, private token: string) {}
 
   private get baseUrl(): string {
     switch (this.provider) {
@@ -23,7 +23,6 @@ export class Api {
     try {
       const body: Record<string, any> = {
         ...requestObject.body,
-        auth_key: this.token,
       }
       const url = `${this.baseUrl}${requestObject.url}`
 
@@ -32,7 +31,7 @@ export class Api {
         url,
         header: {
           'Content-Type': 'application/x-www-form-urlencoded',
-          'User-Agent': 'a-translator-bob/' + process.env.__VERSION__,
+          Authorization: `DeepL-Auth-Key ${this.token}`,
         },
         body,
       })
